@@ -131,7 +131,7 @@ static int qti_ice_setting_config(struct request *req,
 		if (rq_data_dir(req) == WRITE &&
 				(ice_fde_flag & QCOM_ICE_ENCRYPT))
 			setting->encr_bypass = false;
-		else if (rq_data_dir(req) == READ) &&
+		else if (rq_data_dir(req) == READ &&
 				(ice_fde_flag & QCOM_ICE_DECRYPT))
 			setting->decr_bypass = false;
 		else {
